@@ -8,7 +8,7 @@ import base64
 from ultralytics import YOLO
 from .utils import get_labeled_image, calculate_paint_cost
 
-model = YOLO("../model/car_segmentation2/weights/best.pt")
+model = YOLO("../models/segment/car_segmentation2/weights/best.pt")
 
 def process_estimation(file, torch_width, torch_extrusion, paint_cost_per_liter):
 

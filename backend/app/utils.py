@@ -18,7 +18,7 @@ def calculate_paint_cost(masks, classes, class_names, front_door_area, torch_wid
         perimeter = cv2.arcLength(contours[0], True)
         processing_area = area_m2 * (1 + torch_width) * (1 + torch_extrusion)
         paint_required = processing_area / 10
-        paint_cost = paint_required * paint_cost_per_liter
+        paint_cost = paint_required * paint_cost_per_liter * 50
         elements.append({
             "element": class_name,
             "physical_area_m2": round(area_m2, 2),
